@@ -1,3 +1,5 @@
+" Keep Windows behavior
+source 'D:\vim\_vimrc'
 """"""""""CUSTOMIZATION""""""""""
 """"" Vundle config
 set nocompatible              " be iMproved, required
@@ -36,7 +38,7 @@ filetype plugin indent on    " required
 
 "" Basics
 "" As rm command is dangerous in Unix-like systems, keeping a backup for files is necessary.
-"set nobackup
+set nobackup
 set number
 set showcmd
 syntax on
