@@ -1,5 +1,3 @@
-" Keep Windows behavior
-source D:\Vim\_vimrc
 """"""""""CUSTOMIZATION""""""""""
 """"" Vundle config
 set nocompatible              " be iMproved, required
