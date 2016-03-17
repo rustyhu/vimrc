@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
