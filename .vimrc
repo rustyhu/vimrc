@@ -36,24 +36,31 @@ filetype plugin indent on    " required
 """"" End Vundle config
 
 "" Basics
-"" As rm command is dangerous in Unix-like systems, keeping a backup for files is necessary.
-"set nobackup
+"" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
+set nobackup
 set number
 set showcmd
 syntax on
+set laststatus=2
 "" Indent
 set sw=4
 set ts=4
 "" GUI
 if has('gui_running')
-	set lines=35 columns=85
+    set lines=35 columns=85
     winpos 650 0
-	set guioptions-=T
-	set guioptions-=r
-	colorscheme desert 
-	"" Interior character encoding 
-	set fileencodings=utf-8,gbk,gb2312,big5,latin1
-	"" ucs-bom,utf-8,cp950,big5,cp936,gb18030
+    " turn off bars
+    "set guioptions-=m
+       set guioptions-=T
+    " and lines
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=r
+    set guioptions-=R
+    colorscheme desert
+    "" Interior character encoding
+    set fileencodings=utf-8,gbk,gb2312,big5,latin1
+    "" ucs-bom,utf-8,cp950,big5,cp936,gb18030
 endif
 
 "" Programing Language

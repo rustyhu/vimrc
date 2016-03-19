@@ -41,6 +41,7 @@ set nobackup
 set number
 set showcmd
 syntax on
+set laststatus=2
 "" Indent
 set sw=4
 set ts=4
@@ -48,8 +49,14 @@ set ts=4
 if has('gui_running')
 	set lines=35 columns=85
     winpos 650 0
+    " turn off bars
+	"set guioptions-=m
 	set guioptions-=T
+    " and lines
+	set guioptions-=l
+	set guioptions-=L
 	set guioptions-=r
+	set guioptions-=R
 	colorscheme desert 
 	"" Interior character encoding 
 	set fileencodings=utf-8,gbk,gb2312,big5,latin1
