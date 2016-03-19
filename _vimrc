@@ -32,7 +32,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-" 
+"
 """"" End Vundle config
 
 "" Basics
@@ -47,24 +47,23 @@ set sw=4
 set ts=4
 "" GUI
 if has('gui_running')
-	set lines=35 columns=85
+    set lines=35 columns=85
     winpos 650 0
     " turn off bars
-	"set guioptions-=m
-	set guioptions-=T
+    "set guioptions-=m
+    set guioptions-=T
     " and lines
-	set guioptions-=l
-	set guioptions-=L
-	set guioptions-=r
-	set guioptions-=R
-	colorscheme desert 
-	"" Interior character encoding 
-	set fileencodings=utf-8,gbk,gb2312,big5,latin1
-	"" ucs-bom,utf-8,cp950,big5,cp936,gb18030
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=r
+    set guioptions-=R
+    colorscheme desert
+    "" Interior character encoding
+    set fileencodings=utf-8,gbk,gb2312,big5,latin1
+    "" ucs-bom,utf-8,cp950,big5,cp936,gb18030
 endif
 
 "" Programing Language
-filetype indent on
 "" For python
 autocmd FileType python setlocal et sta sw=4 sts=4
 "" For C/C++

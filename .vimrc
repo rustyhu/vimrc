@@ -32,7 +32,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-" 
+"
 """"" End Vundle config
 
 "" Basics
@@ -64,7 +64,6 @@ if has('gui_running')
 endif
 
 "" Programing Language
-filetype indent on
 "" For python
 autocmd FileType python setlocal et sta sw=4 sts=4
 "" For C/C++
