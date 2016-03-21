@@ -4,8 +4,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/vimfiles/bundle/Vundle.vim
-call vundle#begin('~/vimfiles/bundle/')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -36,7 +36,7 @@ filetype plugin indent on    " required
 """"" End Vundle config
 
 "" Basics
-"" As rm command is dangerous in Unix-like systems, keeping a backup for files is necessary.
+"" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
 set nobackup
 set number
 set showcmd

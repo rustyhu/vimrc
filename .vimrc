@@ -51,7 +51,7 @@ if has('gui_running')
     winpos 650 0
     " turn off bars
     "set guioptions-=m
-       set guioptions-=T
+    set guioptions-=T
     " and lines
     set guioptions-=l
     set guioptions-=L
