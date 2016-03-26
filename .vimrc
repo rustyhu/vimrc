@@ -35,16 +35,13 @@ filetype plugin indent on    " required
 "
 """"" End Vundle config
 
-"" Basics
+""""" Basics
 "" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
 set nobackup
 set number
 set showcmd
 syntax on
 set laststatus=2
-"" Indent
-set sw=4
-set ts=4
 "" GUI
 if has('gui_running')
     set lines=35 columns=85
@@ -62,11 +59,18 @@ if has('gui_running')
     set fileencodings=utf-8,gbk,gb2312,big5,latin1
     "" ucs-bom,utf-8,cp950,big5,cp936,gb18030
 endif
+""""" End Basics
 
-"" Programing Language
-"" For python
-autocmd FileType python setlocal et sta sw=4 sts=4
-"" For C/C++
-set expandtab
+""""" Programing
+" Basic Indent
+" options: et: expandtab, sw: shiftwidth, sts: softtabstop, sta: smarttab
+set ts=4
+set sw=4
+"" specific languages
+" For C/C++
+autocmd FileType c,cpp setlocal et
+" For python
+autocmd FileType python setlocal et sta
+""""" End Programing
 
 """"""""""END CUSTOMIZATION""""""""""
