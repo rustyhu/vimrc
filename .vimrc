@@ -67,10 +67,10 @@ endif
 set ts=4
 set sw=4
 "" specific languages
-" For C/C++
-autocmd FileType c,cpp setlocal et
-" For python
-autocmd FileType python setlocal et sta
+" For C, C++, C#
+autocmd FileType c,cpp,cs setlocal et
+" For python, java: testing smarttab
+autocmd FileType python,java setlocal et sta
 """"" End Programing
 
 """"""""""END CUSTOMIZATION""""""""""
