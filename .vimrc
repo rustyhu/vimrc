@@ -73,4 +73,9 @@ autocmd FileType c,cpp,cs setlocal et
 autocmd FileType python,java setlocal et sta
 """"" End Programing
 
+""""" Key maps
+" NERDTree
+map <F2> :NERDTreeToggle<CR>
+
+""""" End Key maps
 """"""""""END CUSTOMIZATION""""""""""
