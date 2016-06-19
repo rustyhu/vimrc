@@ -44,20 +44,21 @@ syntax on
 set laststatus=2
 "" GUI
 if has('gui_running')
-    set lines=35 columns=85
-    winpos 650 0
-    " turn off bars
-    "set guioptions-=m
-    set guioptions-=T
-    " and lines
-    set guioptions-=l
-    set guioptions-=L
-    set guioptions-=r
-    set guioptions-=R
-    colorscheme desert
-    "" Interior character encoding
-    set fileencodings=utf-8,gbk,gb2312,big5,latin1
-    "" ucs-bom,utf-8,cp950,big5,cp936,gb18030
+	"default win size for 14'' notebook screen
+	set lines=35 columns=85
+	winpos 650 0
+	" turn off bars
+	"set guioptions-=m
+	set guioptions-=T
+	" and lines
+	set guioptions-=l
+	set guioptions-=L
+	set guioptions-=r
+	set guioptions-=R
+	colorscheme desert
+	"" Interior character encoding
+	set fileencodings=utf-8,gbk,gb2312,big5,latin1
+	"" ucs-bom,utf-8,cp950,big5,cp936,gb18030
 endif
 """"" End Basics
 
@@ -74,8 +75,29 @@ autocmd FileType python,java setlocal et sta
 """"" End Programing
 
 """"" Key maps
+" Rusty keys
+nmap <space>	<c-f>
 " NERDTree
-map <F2> :NERDTreeToggle<CR>
+if has('gui_running')
+	" KaiGua() Weapon armming!
+	function KaiGua()
+		if &lines != 35 || &columns != 160
+			set lines=35 columns=160
+		endif
+		NERDTreeToggle
+	endfunction
 
+	function GuanGua()
+		NERDTreeClose
+		set lines=35 columns=85
+		winpos 650 0
+	endfunction
+
+	nmap <F2>	:call KaiGua()<CR>
+	nmap <F3>	:call GuanGua()<CR>
+else
+	nmap <F2>	:NERDTreeToggle<CR>
+endif
 """"" End Key maps
+
 """"""""""END CUSTOMIZATION""""""""""
