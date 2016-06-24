@@ -41,7 +41,8 @@ set nobackup
 set number
 set showcmd
 syntax on
-"set laststatus=2
+" For Airline
+set laststatus=2
 "" Interior character encoding
 set fileencodings=utf-8,ucs-bom,gbk,gb2312,big5,latin1
 "" cp950,big5,cp936,gb18030
