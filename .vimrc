@@ -86,9 +86,10 @@ endif
 """"" EndGUI
 
 """"" Keymaps
-" Rusty keys
-nmap <space>        <c-f>
-" NERDTree
+""" Rusty keys
+nnoremap <space>    <c-f>
+
+""" NERDTree
 if has('gui_running')
     " KaiGua() Weapon armming!
     function KaiGua(plus_lines, plus_columns)
@@ -106,11 +107,18 @@ if has('gui_running')
         execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
     endfunction
 
-    nmap <F2>   :call KaiGua(35, 160)<CR>
-    nmap <F3>   :call GuanGua()<CR>
+    nnoremap <F2>   :call KaiGua(35, 160)<CR>
+    nnoremap <F3>   :call GuanGua()<CR>
 else
-    nmap <F2>   :NERDTreeToggle<CR>
+    nnoremap <F2>   :NERDTreeToggle<CR>
 endif
+
+""" Taglist
+nnoremap <silent> <F4>  :TlistToggle<CR>
+" Taglist Options Setting
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+
 """"" End Keymaps
 
 """"""""""END CUSTOMIZATION""""""""""
