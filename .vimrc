@@ -44,7 +44,7 @@ syntax on
 " For Airline
 set laststatus=2
 "" Interior character encoding
-set fileencodings=utf-8,ucs-bom,gbk,gb2312,big5,latin1
+set fileencodings=ucs-bom,utf-8,gbk,gb2312,big5,latin1
 "" cp950,big5,cp936,gb18030
 """"" End Basics
 
@@ -60,12 +60,16 @@ autocmd FileType c,cpp,cs,java setlocal et
 autocmd FileType python setlocal et sta
 " For vimscript
 autocmd FileType vim setlocal et
+" For XML
+autocmd FileType xml setlocal et
+" For Lisp
+autocmd FileType scheme setlocal ts=2 sw =2 et
 """"" End Programing
 
 """"" GUI
 "default win size for 14" notebook screen
-let winpos_h= 700
-let winpos_v= 0
+let winpos_h = 700
+let winpos_v = 0
 let lines_const = 35
 let columns_const = 80
 
@@ -83,11 +87,17 @@ if has('gui_running')
     set guioptions-=R
     colorscheme desert
 endif
-""""" EndGUI
+""""" End GUI
 
 """"" Keymaps
+
 """ Rusty keys
+" leader key
+let mapleader = ","
+" use space to scroll down
 nnoremap <space>    <c-f>
+" keymap for :noh (cancel searching highlight)
+nnoremap <leader>n  :noh<CR>
 
 """ NERDTree
 if has('gui_running')
@@ -102,6 +112,7 @@ if has('gui_running')
 
     function GuanGua()
         NERDTreeClose
+        TlistClose
         let &lines = g:lines_const
         let &columns = g:columns_const
         execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
