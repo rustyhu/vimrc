@@ -89,11 +89,11 @@ if has('gui_running')
 endif
 """"" End GUI
 
-""""" Keymaps
+""""" Keymaps and Plugins Options
 
 """ Rusty keys
 " leader key
-let mapleader = ","
+let mapleader = ";"
 " use space to scroll down
 nnoremap <space>    <c-f>
 " keymap for :noh (cancel searching highlight)
@@ -123,6 +123,8 @@ if has('gui_running')
 else
     nnoremap <F2>   :NERDTreeToggle<CR>
 endif
+" Display bookmarks after start
+let NERDTreeShowBookmarks = 1
 
 """ Taglist
 nnoremap <silent> <F4>  :TlistToggle<CR>
@@ -131,6 +133,6 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_Show_One_File = 1
 
-""""" End Keymaps
+""""" End Keymaps and Plugins Options
 
 """"""""""END CUSTOMIZATION""""""""""
