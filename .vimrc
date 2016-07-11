@@ -41,9 +41,12 @@ set nobackup
 set number
 set showcmd
 syntax on
+" Search highlight
+set hlsearch 
+set incsearch
 " For Airline
 set laststatus=2
-"" Interior character encoding
+" Interior character encoding
 set fileencodings=ucs-bom,utf-8,gbk,gb2312,big5,latin1
 "" cp950,big5,cp936,gb18030
 """"" End Basics
