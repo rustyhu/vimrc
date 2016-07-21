@@ -68,14 +68,14 @@ autocmd FileType scheme setlocal ts=2 sw =2 et
 
 """"" GUI
 "default win size for 14" notebook screen
-let winpos_h = 700
-let winpos_v = 0
-let lines_const = 35
-let columns_const = 80
+let g:winpos_h = 700
+let g:winpos_v = 0
+let g:lines_const = 35
+let g:columns_const = 80
 
 if has('gui_running')
-    let &lines = lines_const
-    let &columns = columns_const
+    let &lines = g:lines_const
+    let &columns = g:columns_const
     execute printf("winpos %d %d", winpos_h, winpos_v)
     " turn off application bars
     "set guioptions-=m
@@ -87,9 +87,38 @@ if has('gui_running')
     set guioptions-=R
     colorscheme desert
 endif
+
+" KaiGua() Weapon armming!
+" hotkey binding is at Keymaps region
+if has('gui_running')
+    function KaiGua(plus_lines, plus_columns)
+        if &lines == g:lines_const && &columns == g:columns_const
+            let &lines = a:plus_lines
+            let &columns = a:plus_columns
+            NERDTreeToggle
+            TlistOpen
+        else
+            NERDTreeClose
+            TlistClose
+            let &lines = g:lines_const
+            let &columns = g:columns_const
+            execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
+        endif
+    endfunction
+endif
+
 """"" End GUI
 
 """"" Keymaps and Plugins Options
+""" NERDTree
+" Display bookmarks after start
+let NERDTreeShowBookmarks = 1
+
+""" Taglist
+" Taglist Options Setting
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Show_One_File = 1
 
 """ Rusty keys
 " leader key
@@ -99,40 +128,13 @@ nnoremap <space>    <c-f>
 " keymap for :noh (cancel searching highlight)
 nnoremap <leader>n  :noh<CR>
 
-""" NERDTree
-if has('gui_running')
-    " KaiGua() Weapon armming!
-    function KaiGua(plus_lines, plus_columns)
-        if &lines != a:plus_lines || &columns != a:plus_columns
-            let &lines = a:plus_lines
-            let &columns = a:plus_columns
-        endif
-        NERDTreeToggle
-    endfunction
-
-    function GuanGua()
-        NERDTreeClose
-        TlistClose
-        let &lines = g:lines_const
-        let &columns = g:columns_const
-        execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
-    endfunction
-
-    nnoremap <F2>   :call KaiGua(35, 160)<CR>
-    nnoremap <F3>   :call GuanGua()<CR>
-else
-    nnoremap <F2>   :NERDTreeToggle<CR>
-endif
-" Display bookmarks after start
-let NERDTreeShowBookmarks = 1
-
-""" Taglist
+nnoremap <silent> <F2>  :NERDTreeToggle<CR>
 nnoremap <silent> <F4>  :TlistToggle<CR>
-" Taglist Options Setting
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_Show_One_File = 1
+if has('gui_running')
+    nnoremap <silent> <F3>  :call KaiGua(35, 160)<CR>
+endif
 
 """"" End Keymaps and Plugins Options
+
 
 """"""""""END CUSTOMIZATION""""""""""
