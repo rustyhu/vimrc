@@ -42,7 +42,7 @@ set number
 set showcmd
 syntax on
 " Search highlight
-set hlsearch 
+set hlsearch
 set incsearch
 " For Airline
 set laststatus=2
@@ -98,8 +98,8 @@ if has('gui_running')
         if &lines == g:lines_const && &columns == g:columns_const
             let &lines = a:plus_lines
             let &columns = a:plus_columns
-            NERDTreeToggle
             TlistOpen
+            NERDTreeToggle
         else
             NERDTreeClose
             TlistClose
