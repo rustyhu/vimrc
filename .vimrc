@@ -99,7 +99,7 @@ if has('gui_running')
             let &lines = a:plus_lines
             let &columns = a:plus_columns
             TlistOpen
-            NERDTreeToggle
+            NERDTree
         else
             NERDTreeClose
             TlistClose
