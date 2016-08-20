@@ -61,12 +61,14 @@ set sw=4
 autocmd FileType c,cpp,cs,java setlocal et
 " For python: testing smarttab
 autocmd FileType python setlocal et sta
-" For vimscript
-autocmd FileType vim setlocal et
-" For XML
-autocmd FileType xml setlocal et
 " For Lisp
 autocmd FileType scheme setlocal ts=2 sw =2 et
+" For shell script, vimscript
+autocmd FileType sh,vim setlocal ts=2 sw =2 et
+" For SQL
+autocmd FileType sql setlocal ts=2 sw =2 et
+" For XML
+autocmd FileType xml setlocal et
 """"" End Programing
 
 """"" GUI
@@ -77,53 +79,44 @@ let g:lines_const = 35
 let g:columns_const = 80
 
 if has('gui_running')
+  function GUIWinSize()
     let &lines = g:lines_const
     let &columns = g:columns_const
-    execute printf("winpos %d %d", winpos_h, winpos_v)
-    " turn off application bars
-    "set guioptions-=m
-    set guioptions-=T
-    " turn off scrollbars
-    set guioptions-=l
-    set guioptions-=L
-    set guioptions-=r
-    set guioptions-=R
-    colorscheme desert
-endif
+    execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
+  endfunction
 
-" KaiGua() Weapon armming!
-" hotkey binding is at Keymaps region
-if has('gui_running')
-    function KaiGua(plus_lines, plus_columns)
-        if &lines == g:lines_const && &columns == g:columns_const
-            let &lines = a:plus_lines
-            let &columns = a:plus_columns
-            TlistOpen
-            NERDTree
-        else
-            NERDTreeClose
-            TlistClose
-            let &lines = g:lines_const
-            let &columns = g:columns_const
-            execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
-        endif
-    endfunction
+  " KaiGua() Weapon armming!
+  " hotkey binding is at Keymaps region
+  function KaiGua(plus_lines, plus_columns)
+    if &lines == g:lines_const && &columns == g:columns_const
+      let &lines = a:plus_lines
+      let &columns = a:plus_columns
+      TlistOpen
+      NERDTree
+    else
+      NERDTreeClose
+      TlistClose
+      let &lines = g:lines_const
+      let &columns = g:columns_const
+      execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
+    endif
+  endfunction
+
+  call GUIWinSize()
+  " turn off application bars
+  "set guioptions-=m
+  set guioptions-=T
+  " turn off scrollbars
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=R
+  colorscheme desert
 endif
 
 """"" End GUI
 
-""""" Keymaps and Plugins Options
-""" NERDTree
-" Display bookmarks after start
-let NERDTreeShowBookmarks = 1
-
-""" Taglist
-" Taglist Options Setting
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_Show_One_File = 1
-
-""" Rusty keys
+""""" Keymaps
 " leader key
 let mapleader = ";"
 " use space to scroll down
@@ -134,10 +127,23 @@ nnoremap <leader>n  :noh<CR>
 nnoremap <silent> <F2>  :NERDTreeToggle<CR>
 nnoremap <silent> <F4>  :TlistToggle<CR>
 if has('gui_running')
-    nnoremap <silent> <F3>  :call KaiGua(35, 160)<CR>
+  nnoremap <silent> <F3>  :call KaiGua(35, 160)<CR>
 endif
 
-""""" End Keymaps and Plugins Options
+""""" End Keymaps
+
+""""" Plugins Options
+""" NERDTree
+" Display bookmarks after start
+let NERDTreeShowBookmarks = 1
+
+""" Taglist
+" Taglist Options Setting
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Show_One_File = 1
+
+""""" End Plugins Options
 
 
 """"""""""END CUSTOMIZATION""""""""""
