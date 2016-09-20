@@ -118,7 +118,7 @@ endif
 
 """"" Keymaps
 " leader key
-let mapleader = ";"
+let mapleader = ","
 " use space to scroll down
 nnoremap <space>    <c-f>
 " keymap for :noh (cancel searching highlight)
