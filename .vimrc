@@ -40,15 +40,20 @@ filetype plugin indent on    " required
 set nobackup
 set number
 set showcmd
-syntax on
+set noundofile
+" Show a few lines of context around the cursor
+set scrolloff=0
 " Search highlight
 set hlsearch
 set incsearch
-" For Airline
+" Show statusline always
 set laststatus=2
+" display completion matches in a status line
+set wildmenu
 " Interior character encoding
 set fileencodings=ucs-bom,utf-8,gbk,gb2312,big5,latin1
 "" cp950,big5,cp936,gb18030
+syntax on
 """"" End Basics
 
 """"" Programing
