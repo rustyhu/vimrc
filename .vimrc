@@ -79,7 +79,7 @@ autocmd FileType xml setlocal et
 
 """"" GUI
 "default win size for 14" notebook screen
-let g:winpos_h = 620
+let g:winpos_h = 640
 let g:winpos_v = 0
 let g:lines_const = 35
 let g:columns_const = 80
