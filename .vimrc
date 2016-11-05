@@ -79,7 +79,7 @@ autocmd FileType xml setlocal et
 
 """"" GUI
 "default win size for 14" notebook screen
-let g:winpos_h = 700
+let g:winpos_h = 620
 let g:winpos_v = 0
 let g:lines_const = 35
 let g:columns_const = 80
@@ -110,8 +110,8 @@ if has('gui_running')
 
   call GUIWinSize()
   " turn off application bars
-  "set guioptions-=m
-  set guioptions-=T
+  set guioptions-=m
+  "set guioptions-=T
   " turn off scrollbars
   set guioptions-=l
   set guioptions-=L
