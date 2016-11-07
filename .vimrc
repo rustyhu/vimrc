@@ -111,7 +111,7 @@ if has('gui_running')
   call GUIWinSize()
   " turn off application bars
   set guioptions-=m
-  "set guioptions-=T
+  set guioptions-=T
   " turn off scrollbars
   set guioptions-=l
   set guioptions-=L
