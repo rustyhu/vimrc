@@ -80,7 +80,7 @@ autocmd FileType xml setlocal et
 """"" GUI
 "default win size for 14" notebook screen
 let g:winpos_h = 640
-let g:winpos_v = 0
+let g:winpos_v = 20
 let g:lines_const = 35
 let g:columns_const = 80
 
@@ -148,6 +148,9 @@ let NERDTreeShowBookmarks = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_Show_One_File = 1
+
+"" Airline
+let g:airline#extensions#whitespace#checks=['indent', 'mixed-indent-file']
 
 """"" End Plugins Options
 
