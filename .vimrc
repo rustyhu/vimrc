@@ -62,19 +62,18 @@ syntax on
 " options: et: expandtab, sw: shiftwidth, sts: softtabstop, sta: smarttab
 set ts=4
 set sw=4
+set et
 "" specific languages
 " For C, C++, C#, java
-autocmd FileType c,cpp,cs,java setlocal et
-" For python: testing smarttab
-autocmd FileType python setlocal et sta
+autocmd FileType c,cpp,cs,java,javascript setlocal
 " For Lisp
-autocmd FileType scheme setlocal ts=2 sw =2 et
-" For shell script, vimscript
-autocmd FileType sh,vim setlocal ts=2 sw =2 et
-" For SQL
-autocmd FileType sql setlocal ts=2 sw =2 et
-" For XML
-autocmd FileType xml setlocal et
+autocmd FileType scheme setlocal ts=2 sw=2
+" For python
+autocmd FileType python setlocal
+" For Scripts(shell script, vimscript, SQL, ...)
+autocmd FileType vim,sh,bat,sql setlocal ts=2 sw=2
+" For Markups(XML, html, ...)
+autocmd FileType xml,html setlocal ts=2 sw=2
 """"" End Programing
 
 """"" GUI
