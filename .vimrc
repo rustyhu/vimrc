@@ -65,13 +65,17 @@ set sw=4
 set et
 "" specific languages
 " For C, C++, C#, java
-autocmd FileType c,cpp,cs,java,javascript setlocal
+"autocmd FileType c,cpp,cs,java setlocal
 " For Lisp
 autocmd FileType scheme setlocal ts=2 sw=2
+
 " For python
-autocmd FileType python setlocal
+"autocmd FileType python setlocal
 " For Scripts(shell script, vimscript, SQL, ...)
 autocmd FileType vim,sh,bat,sql setlocal ts=2 sw=2
+
+" For JavaScript
+"autocmd FileType javascript setlocal
 " For Markups(XML, html, ...)
 autocmd FileType xml,html setlocal ts=2 sw=2
 """"" End Programing
