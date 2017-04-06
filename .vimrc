@@ -16,8 +16,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround'
+"Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()            " required
