@@ -17,7 +17,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 "Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()            " required
@@ -49,12 +48,15 @@ syntax on
 """"" End Basics
 
 """"" Programing
-" Basic Indent
+"" Basic Indentation
 " options: et: expandtab, sw: shiftwidth, sts: softtabstop, sta: smarttab
 set ts=4
 set sw=4
 set et
-"" specific languages
+"" SPECIFICS
+" For text
+"autocmd FileType text setlocal
+
 " For C, C++, C#, java
 "autocmd FileType c,cpp,cs,java setlocal
 " For Lisp
@@ -69,6 +71,9 @@ autocmd FileType vim,sh,bat,sql setlocal ts=2 sw=2
 "autocmd FileType javascript setlocal
 " For Markups(XML, html, ...)
 autocmd FileType xml,html setlocal ts=2 sw=2
+
+" For Makefile
+autocmd FileType make setlocal noet
 """"" End Programing
 
 """"" GUI
