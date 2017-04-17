@@ -90,14 +90,14 @@ if has('gui_running')
     execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
   endfunction
 
-  " KaiGua() Weapon armming!
+  " KaiGua() enlarge the window
   " hotkey binding is at Keymaps region
   function KaiGua(plus_lines, plus_columns)
     if &lines == g:lines_const && &columns == g:columns_const
       let &lines = a:plus_lines
       let &columns = a:plus_columns
-      TlistOpen
-      NERDTree
+      "TlistOpen
+      "NERDTree
     else
       NERDTreeClose
       TlistClose
@@ -131,9 +131,14 @@ nnoremap <leader>n  :noh<CR>
 
 nnoremap <silent> <F2>  :NERDTreeToggle<CR>
 nnoremap <silent> <F4>  :TlistToggle<CR>
+" KaiGua()
 if has('gui_running')
   nnoremap <silent> <F3>  :call KaiGua(35, 160)<CR>
 endif
+
+" quickfix
+nnoremap <F9>   :cp<CR>
+nnoremap <F10>  :cn<CR>
 
 """"" End Keymaps
 
