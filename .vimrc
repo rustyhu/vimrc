@@ -1,12 +1,14 @@
 """"""""""CUSTOMIZATION""""""""""
 set nocompatible
 
-" Load plugin manager
+""""" Load plugin manager
+"" Load if the file exists
 if glob('~/vimrc/PluginManagerLoad.vim') != ""
   source ~/vimrc/PluginManagerLoad.vim
 elseif
   echo 'No Plugins.'
 endif
+""""" End Load plugin manager
 
 """"" Basics
 "" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
@@ -31,7 +33,7 @@ syntax on
 """"" End Basics
 
 """"" Programing
-"" Basic Indentation
+"" Basic indentation
 " options: et: expandtab, sw: shiftwidth, sts: softtabstop, sta: smarttab
 set ts=4
 set sw=4
@@ -60,7 +62,7 @@ autocmd FileType make setlocal noet
 """"" End Programing
 
 """"" GUI
-"default win size for 14" notebook screen
+"" Default win size for 14" notebook screen
 let g:winpos_h = 720
 let g:winpos_v = 20
 let g:lines_const = 35
@@ -80,9 +82,11 @@ if has('gui_running')
       let &lines = a:plus_lines
       let &columns = a:plus_columns
     else
-      " Native hotkeys never depends on plugins
-      "NERDTreeClose
-      "TlistClose
+      " turn off
+      if exists(":NERDTreeClose")
+        NERDTreeClose
+      if exists(":TlistClose")
+        TlistClose
       only
       let &lines = g:lines_const
       let &columns = g:columns_const
@@ -101,11 +105,10 @@ if has('gui_running')
   set guioptions-=R
   colorscheme desert
 endif
-
 """"" End GUI
 
 """"" Keymaps
-" Only native keymaps here. Plugin keymaps are at 'Plugins Options' region.
+"" Only built-in supported keymaps here. Plugin keymaps are at 'Plugins Options' region.
 " leader key
 let mapleader = ","
 " use space to scroll down
@@ -121,15 +124,12 @@ endif
 " quickfix
 nnoremap <F9>   :cp<CR>
 nnoremap <F10>  :cn<CR>
-
 """"" End Keymaps
 
 """"" Plugins Options
-" if the file exists
 if glob('~/vimrc/PluginsOptions.vim') != ""
   source ~/vimrc/PluginsOptions.vim
 endif
 """"" End Plugins Options
-
 
 """"""""""END CUSTOMIZATION""""""""""
