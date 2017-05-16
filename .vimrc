@@ -5,8 +5,8 @@ set nocompatible
 "" Load if the file exists
 if glob('~/vimrc/PluginManagerLoad.vim') != ""
   source ~/vimrc/PluginManagerLoad.vim
-elseif
-  echo 'No Plugins.'
+else
+  "echo 'No Plugins.'
 endif
 """"" End Load plugin manager
 
