@@ -85,9 +85,10 @@ if has('gui_running')
       " turn off
       if exists(":NERDTreeClose")
         NERDTreeClose
+      endif
       if exists(":TlistClose")
         TlistClose
-      only
+      endif
       let &lines = g:lines_const
       let &columns = g:columns_const
       execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
