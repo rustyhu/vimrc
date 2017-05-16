@@ -20,10 +20,13 @@ if glob('~/.vim/bundle/Vundle.vim') != ""
   Plugin 'vim-scripts/taglist.vim'
 
   call vundle#end()            " required
-  filetype plugin indent on    " required
   " To ignore plugin indent changes, instead use:
   "filetype plugin on
   """"" End Vundle config
-elseif
+elseif glob('~/.vim/bundle/vim-pathogen') != ""
   """"" Pathogen config
+  runtime bundle/vim-pathogen/autoload/pathogen.vim
+  execute pathogen#infect()
 endif
+
+filetype plugin indent on    " required

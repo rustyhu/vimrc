@@ -4,7 +4,7 @@ source ../_vimrc
 """"""""""CUSTOMIZATION""""""""""
 set nocompatible              " be iMproved, required
 
-runtime ../vimfiles/bundle/vim-pathogen/pathogen.vim
+runtime ../vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 filetype plugin indent on    " required
