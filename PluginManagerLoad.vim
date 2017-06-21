@@ -12,11 +12,12 @@ if glob('~/.vim/bundle/Vundle.vim') != ""
 
   Plugin 'VundleVim/Vundle.vim'
   " Keep Plugin commands between vundle#begin/end.
-  Plugin 'vim-scripts/taglist.vim'
+  "Plugin 'vim-scripts/taglist.vim'
+  Plugin 'majutsushi/tagbar'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'vim-airline/vim-airline'
-  "Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'ctrlpvim/ctrlp.vim'
   " CPP
   Plugin 'octol/vim-cpp-enhanced-highlight'
 

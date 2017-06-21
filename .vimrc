@@ -112,8 +112,9 @@ endif
 "" Only built-in supported keymaps here. Plugin keymaps are at 'Plugins Options' region.
 " leader key
 let mapleader = ","
-" use space to scroll down
-nnoremap <space>    <c-f>
+" use space to scroll down, backspace to scroll up
+nnoremap <space>      <c-f>
+nnoremap <backspace>  <c-b>
 " keymap for :noh (cancel searching highlight)
 nnoremap <leader>n  :noh<CR>
 
