@@ -41,22 +41,18 @@ set et
 "" SPECIFICS
 " For text
 "autocmd FileType text setlocal
-
 " For C, C++, C#, java
 "autocmd FileType c,cpp,cs,java setlocal
 " For Lisp
 autocmd FileType scheme setlocal ts=2 sw=2
-
 " For python
 "autocmd FileType python setlocal
 " For Scripts(shell script, vimscript, SQL, ...)
 autocmd FileType vim,sh,bat,sql setlocal ts=2 sw=2
-
 " For JavaScript
 "autocmd FileType javascript setlocal
 " For Markups(XML, html, ...)
 autocmd FileType xml,html setlocal ts=2 sw=2
-
 " For Makefile
 autocmd FileType make setlocal noet
 """"" End Programing
