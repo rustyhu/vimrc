@@ -20,6 +20,10 @@ if glob('~/.vim/bundle/Vundle.vim') != ""
   Plugin 'ctrlpvim/ctrlp.vim'
   " CPP
   Plugin 'octol/vim-cpp-enhanced-highlight'
+  " Go
+  Plugin 'fatih/vim-go'
+  " Rust
+  Plugin 'rust-lang/rust.vim'
 
   call vundle#end()            " required
   " To ignore plugin indent changes, instead use:
