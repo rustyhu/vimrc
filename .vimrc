@@ -82,8 +82,8 @@ if has('gui_running')
       if exists(":NERDTreeClose")
         NERDTreeClose
       endif
-      if exists(":TlistClose")
-        TlistClose
+      if exists(":TagbarClose")
+        TagbarClose
       endif
       let &lines = g:lines_const
       let &columns = g:columns_const
