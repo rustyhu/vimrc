@@ -3,10 +3,9 @@ set nocompatible
 
 """"" Load plugin manager
 "" Load if the file exists
-if glob('~/vimrc/PluginManagerLoad.vim') != ""
-  source ~/vimrc/PluginManagerLoad.vim
-else
-  "echo 'No Plugins.'
+let s:file_pm = glob('~/vimrc/PluginManagerLoad.vim')
+if s:file_pm != ""
+  exec "source" s:file_pm
 endif
 """"" End Load plugin manager
 
@@ -124,8 +123,9 @@ nnoremap <F10>  :cn<CR>
 """"" End Keymaps
 
 """"" Plugins Options
-if glob('~/vimrc/PluginsOptions.vim') != ""
-  source ~/vimrc/PluginsOptions.vim
+let s:file_po = glob('~/vimrc/PluginsOptions.vim')
+if s:file_po != ""
+  exec "source" s:file_po
 endif
 """"" End Plugins Options
 
