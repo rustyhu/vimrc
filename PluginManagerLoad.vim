@@ -11,18 +11,22 @@ if glob('~/.vim/bundle/Vundle.vim') != ""
   "call vundle#begin('~/some/path/here')
 
   Plugin 'VundleVim/Vundle.vim'
-  " Keep Plugin commands between vundle#begin/end.
-  "Plugin 'vim-scripts/taglist.vim'
+  " Basic equipments
   Plugin 'majutsushi/tagbar'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'vim-airline/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
-  " CPP
+  " Git wrapper
+  Plugin 'tpope/vim-fugitive'
+  " PROGRAMMING SUPPORT
+  Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'tomtom/tlib_vim'
+  Plugin 'garbas/vim-snipmate'
+  Plugin 'vim-syntastic/syntastic'
+  " Languages
   Plugin 'octol/vim-cpp-enhanced-highlight'
-  " Go
   Plugin 'fatih/vim-go'
-  " Rust
   Plugin 'rust-lang/rust.vim'
 
   call vundle#end()            " required

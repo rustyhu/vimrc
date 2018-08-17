@@ -9,6 +9,13 @@ if s:file_pm != ""
 endif
 """"" End Load plugin manager
 
+""""" Plugins Options
+let s:file_po = glob('~/vimrc/PluginsOptions.vim')
+if s:file_po != ""
+  exec "source" s:file_po
+endif
+""""" End Plugins Options
+
 """"" Basics
 "" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
 set nobackup
@@ -121,12 +128,5 @@ endif
 nnoremap <F9>   :cp<CR>
 nnoremap <F10>  :cn<CR>
 """"" End Keymaps
-
-""""" Plugins Options
-let s:file_po = glob('~/vimrc/PluginsOptions.vim')
-if s:file_po != ""
-  exec "source" s:file_po
-endif
-""""" End Plugins Options
 
 """"""""""END CUSTOMIZATION""""""""""
