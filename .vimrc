@@ -24,6 +24,7 @@ set showcmd
 set noundofile
 " Show a few lines of context around the cursor
 set scrolloff=0
+set backspace=2
 " Search highlight
 set hlsearch
 set incsearch
@@ -64,13 +65,13 @@ autocmd FileType make setlocal noet
 """"" End Programing
 
 """"" GUI
-"" Default win size for 14" notebook screen
-let g:winpos_h = 716
-let g:winpos_v = 20
-let g:lines_const = 35
-let g:columns_const = 80
-
 if has('gui_running')
+  " Default win size for 14" notebook screen
+  let g:winpos_h = 716
+  let g:winpos_v = 20
+  let g:lines_const = 35
+  let g:columns_const = 80
+
   function GUIWinSize()
     let &lines = g:lines_const
     let &columns = g:columns_const
@@ -121,7 +122,7 @@ nnoremap <leader>n  :noh<CR>
 
 " KaiGua()
 if has('gui_running')
-  nnoremap <silent> <F3>  :call KaiGua(35, 160)<CR>
+  nnoremap <silent> <F3>  :call KaiGua(g:lines_const + 10, 2 * g:columns_const)<CR>
 endif
 
 " quickfix
