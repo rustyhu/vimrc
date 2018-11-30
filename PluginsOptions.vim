@@ -14,8 +14,10 @@ let g:airline_right_sep = '<'
 let g:airline#extensions#whitespace#checks=['indent', 'mixed-indent-file']
 
 """ Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+if exists(":SyntasticCheck")
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+endif
 "set statusline+=%*
 let g:syntastic_mode_map = { "mode": "passive", }
 let g:syntastic_always_populate_loc_list = 1

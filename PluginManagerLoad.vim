@@ -1,12 +1,12 @@
 """"" PluginManager
 
-if glob('~/.vim/bundle/Vundle.vim') != ""
+if glob('~/vimrc/bundle/Vundle.vim') != ""
   """"" Vundle config
   filetype off                  " required
 
   " set the runtime path to include Vundle and initialize
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+  set rtp+=~/vimrc/bundle/Vundle.vim
+  call vundle#begin('~/vimrc/bundle')
   " alternatively, pass a path where Vundle should install plugins
   "call vundle#begin('~/some/path/here')
 
@@ -24,6 +24,8 @@ if glob('~/.vim/bundle/Vundle.vim') != ""
   Plugin 'tomtom/tlib_vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'vim-syntastic/syntastic'
+  " YouCompleteMe!
+  Plugin 'Valloric/YouCompleteMe'
   " Languages
   Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'fatih/vim-go'
