@@ -20,7 +20,7 @@ endif
 "" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
 set nobackup
 set ruler
-set number
+set relativenumber
 set showcmd
 set noundofile
 " Show a few lines of context around the cursor
@@ -100,8 +100,9 @@ if has('gui_running')
   endfunction
 
   call GUIWinSize()
-  " turn off application bars
+  " turn off menu, tools bar
   set guioptions-=m
+  set guioptions-=T
   " turn off scrollbars
   set guioptions-=l
   set guioptions-=L

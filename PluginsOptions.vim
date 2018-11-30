@@ -32,4 +32,11 @@ nnoremap <F2>  :NERDTreeToggle<CR>
 nnoremap <F4>  :TagbarToggle<CR>
 nnoremap <F5>  :SyntasticToggleMode<CR>
 
+"" YouCompleteMe
+" indicate a global ycm py conf for c/c++ programming analysis:
+"let g:ycm_global_ycm_extra_conf = ''
+
+" Jump
+nnoremap <leader>g  :YcmCompleter GoTo<CR>
+
 """"" End Plugins Options
