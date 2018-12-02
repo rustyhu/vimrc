@@ -20,6 +20,7 @@ endif
 "" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
 set nobackup
 set ruler
+set number
 set relativenumber
 set showcmd
 set noundofile
