@@ -18,7 +18,6 @@ if exists(":SyntasticCheck")
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
 endif
-"set statusline+=%*
 let g:syntastic_mode_map = { "mode": "passive", }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -27,15 +26,13 @@ let g:syntastic_auto_loc_list = 1
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 
-"" Plugin keymaps
-nnoremap <F2>  :NERDTreeToggle<CR>
-nnoremap <F4>  :TagbarToggle<CR>
-nnoremap <F5>  :SyntasticToggleMode<CR>
-
-"" YouCompleteMe
+""" YouCompleteMe
 " indicate a global ycm py conf for c/c++ programming analysis:
 "let g:ycm_global_ycm_extra_conf = ''
 
+"" Plugin keymaps
+nnoremap <F2>  :NERDTreeToggle<CR>
+nnoremap <F4>  :TagbarToggle<CR>
 " Jump
 nnoremap <leader>g  :YcmCompleter GoTo<CR>
 
