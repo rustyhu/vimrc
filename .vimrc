@@ -36,12 +36,10 @@ set laststatus=2
 set wildmenu
 " Interior character encoding
 set encoding=utf-8
+" other file encodings: cp950,big5,cp936,gb18030
 set fileencodings=ucs-bom,utf-8,gbk,gb2312,big5,latin1
-"""cp950,big5,cp936,gb18030
-
-"" Colorful
+" Colorful
 syntax on
-set t_Co=256
 colorscheme desert
 """"" End Basics
 
