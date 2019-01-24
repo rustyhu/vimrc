@@ -11,7 +11,7 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   "call vundle#begin('~/some/path/here')
 
   Plugin 'VundleVim/Vundle.vim'
-  " Basic equipments
+  " Basics
   Plugin 'majutsushi/tagbar'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/nerdcommenter'
@@ -19,14 +19,11 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   Plugin 'ctrlpvim/ctrlp.vim'
   " Git wrapper
   Plugin 'tpope/vim-fugitive'
-  " PROGRAMMING SUPPORT
-  Plugin 'MarcWeber/vim-addon-mw-utils'
-  Plugin 'tomtom/tlib_vim'
-  Plugin 'garbas/vim-snipmate'
-  Plugin 'vim-syntastic/syntastic'
-  " YouCompleteMe!
+  " Programming support
+  Plugin 'SirVer/ultisnips'
+  Plugin 'honza/vim-snippets'
   Plugin 'Valloric/YouCompleteMe'
-  " Languages
+  " Languages enhancements
   Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'fatih/vim-go'
   Plugin 'rust-lang/rust.vim'

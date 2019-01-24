@@ -11,7 +11,6 @@ let g:tagbar_sort = 0
 "let g:airline_symbols_ascii = 1
 "let g:airline_left_sep = '>'
 "let g:airline_right_sep = '<'
-
 let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
 let g:airline#extensions#whitespace#checks=['indent', 'mixed-indent-file']
 
@@ -22,6 +21,9 @@ let g:cpp_member_variable_highlight = 1
 """ YouCompleteMe
 " indicate a global ycm py conf for c/c++ programming analysis:
 "let g:ycm_global_ycm_extra_conf = ''
+
+"" ultisnips
+let g:UltiSnipsExpandTrigger = "<c-enter>"
 
 "" Plugin keymaps
 nnoremap <F2>  :NERDTreeToggle<CR>
