@@ -19,8 +19,9 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 
 """ YouCompleteMe
-" indicate a global ycm py conf for c/c++ programming analysis:
-"let g:ycm_global_ycm_extra_conf = ''
+" Indicate a global ycm conf for c/c++ programming analysis.
+" Define a overlap one if another position is used.
+let g:ycm_global_ycm_extra_conf = '~/vimrc/.ycm_extra_conf.py'
 
 "" ultisnips
 let g:UltiSnipsExpandTrigger = "<c-enter>"
