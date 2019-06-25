@@ -24,7 +24,7 @@ let g:cpp_member_variable_highlight = 1
 let g:ycm_global_ycm_extra_conf = '~/vimrc/.ycm_extra_conf.py'
 
 "" ultisnips
-let g:UltiSnipsExpandTrigger = "<c-enter>"
+let g:UltiSnipsExpandTrigger = "<enter>"
 
 "" Plugin keymaps
 nnoremap <F2>  :NERDTreeToggle<CR>

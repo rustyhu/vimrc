@@ -59,7 +59,7 @@ autocmd FileType scheme setlocal ts=2 sw=2
 " For python
 "autocmd FileType python setlocal
 " For Scripts(shell script, vimscript, SQL, ...)
-autocmd FileType vim,sh,bat,sql setlocal ts=2 sw=2
+autocmd FileType vim,sh,bat,sql,cmake setlocal ts=2 sw=2
 " For JavaScript
 "autocmd FileType javascript setlocal
 " For Markups(XML, html, ...)
