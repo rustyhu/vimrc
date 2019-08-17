@@ -22,7 +22,7 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   " Programming support
   Plugin 'SirVer/ultisnips'
   Plugin 'honza/vim-snippets'
-  Plugin 'Valloric/YouCompleteMe'
+  Plugin 'ycm-core/YouCompleteMe'
   " Languages enhancements
   Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'fatih/vim-go'
