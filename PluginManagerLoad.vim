@@ -10,7 +10,8 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   " alternatively, pass a path where Vundle should install plugins
   "call vundle#begin('~/some/path/here')
 
-  Plugin 'VundleVim/Vundle.vim'
+  " As a submodule of parent repo, Vundle do not manage itself any more.
+  "Plugin 'VundleVim/Vundle.vim'
   " Basics
   Plugin 'majutsushi/tagbar'
   Plugin 'scrooloose/nerdtree'
