@@ -18,6 +18,7 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'vim-airline/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'jiangmiao/auto-pairs'
   " Git wrapper
   Plugin 'tpope/vim-fugitive'
   " Programming support
