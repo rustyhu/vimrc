@@ -117,6 +117,22 @@ nnoremap <backspace>  <c-b>
 " keymap for :noh (cancel searching highlight)
 nnoremap <leader>n  :noh<CR>
 
+" cut and paste behavior
+if has("clipboard")
+  " CTRL-X and SHIFT-Del are Cut
+  vnoremap <C-X> "+x
+  " CTRL-C and CTRL-Insert are Copy
+  vnoremap <C-C> "+y
+  " Use CTRL-Q to do what CTRL-V used to do
+  noremap <C-Q>		<C-V>
+  " CTRL-V and SHIFT-Insert are Paste
+  "map <C-V>		"+gP
+  " CTRL-V insert mode paste
+  exe 'inoremap <script> <C-V> <C-G>u' . paste#paste_cmd['i']
+  " CTRL-V cmdline paste
+  cmap <C-V>		<C-R>+
+endif
+
 " KaiGua()
 if has('gui_running')
   nnoremap <silent> <F3>  :call KaiGua(g:lines_const + 10, 2 * g:columns_const)<CR>
