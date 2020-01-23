@@ -1,4 +1,4 @@
-""""" Plugins Options
+""""" PLUGINS OPTIONS
 
 """ NERDTree
 " Display bookmarks after start
@@ -25,13 +25,16 @@ let g:ycm_global_ycm_extra_conf = '~/vimrc/.ycm_extra_conf.py'
 " close YCM clangd now
 let g:ycm_use_clangd = 0
 
-"" ultisnips
+""" ultisnips
 let g:UltiSnipsExpandTrigger = "<c-enter>"
 
-"" Plugin keymaps
+""" vim-go
+let g:go_autodetect_gopath = 1
+
+
+""""" PLUGINS KEYMAPS 
 nnoremap <F2>  :NERDTreeToggle<CR>
 nnoremap <F4>  :TagbarToggle<CR>
 " Jump
 nnoremap <leader>e  :YcmCompleter GoTo<CR>
 
-""""" End Plugins Options
