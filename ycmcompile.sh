@@ -1,5 +1,6 @@
 #!/bin/bash
 
 pushd ~/vimrc/bundle/YouCompleteMe
-python3 install.py --clang-completer --clangd-completer --go-completer --ts-completer --rust-completer
+# drop --go-completer, use vim-go to take care of golang instead.
+python3 install.py --clang-completer --clangd-completer --ts-completer --rust-completer
 popd
