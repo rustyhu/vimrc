@@ -25,9 +25,9 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   Plugin 'SirVer/ultisnips'
   Plugin 'honza/vim-snippets'
   Plugin 'ycm-core/YouCompleteMe'
-  " Languages enhancements
+  " Enhancements of cpp, rust(go use gopls, with YCM instead of vim-go)
   Plugin 'octol/vim-cpp-enhanced-highlight'
-  Plugin 'fatih/vim-go'
+  "Plugin 'fatih/vim-go'
   Plugin 'rust-lang/rust.vim'
 
   call vundle#end()            " required

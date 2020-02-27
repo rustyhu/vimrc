@@ -29,7 +29,7 @@ let g:ycm_use_clangd = 0
 let g:UltiSnipsExpandTrigger = "<c-enter>"
 
 """ vim-go
-let g:go_autodetect_gopath = 1
+"let g:go_autodetect_gopath = 1
 
 
 """"" PLUGINS KEYMAPS 
