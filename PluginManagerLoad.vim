@@ -27,7 +27,7 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   Plugin 'ycm-core/YouCompleteMe'
   " Enhancements of cpp, rust(go use gopls, with YCM instead of vim-go)
   Plugin 'octol/vim-cpp-enhanced-highlight'
-  "Plugin 'fatih/vim-go'
+  Plugin 'fatih/vim-go'
   Plugin 'rust-lang/rust.vim'
 
   call vundle#end()            " required

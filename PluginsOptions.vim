@@ -30,6 +30,8 @@ let g:UltiSnipsExpandTrigger = "<c-enter>"
 
 """ vim-go
 "let g:go_autodetect_gopath = 1
+" turn off vim-go's gopls
+let g:go_gopls_enabled = 0
 
 
 """"" PLUGINS KEYMAPS 
