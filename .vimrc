@@ -64,9 +64,9 @@ autocmd FileType make setlocal noet
 """"" GUI
 if has('gui_running')
   " Default win size for 14" notebook screen
-  let g:winpos_h = 716
+  let g:winpos_h = 712
   let g:winpos_v = 20
-  let g:lines_const = 35
+  let g:lines_const = 30
   let g:columns_const = 80
 
   function GUIWinSize()
