@@ -1,0 +1,1 @@
+gvim.exe --noplugin "+set guifont=Consolas:h12"

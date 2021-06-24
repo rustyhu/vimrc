@@ -64,7 +64,7 @@ autocmd FileType make setlocal noet
 """"" GUI
 if has('gui_running')
   " Default win size for 14" notebook screen
-  let g:winpos_h = 712
+  let g:winpos_h = 700
   let g:winpos_v = 20
   let g:lines_const = 30
   let g:columns_const = 80
@@ -75,9 +75,9 @@ if has('gui_running')
     execute printf("winpos %d %d", g:winpos_h, g:winpos_v)
   endfunction
 
-  " KaiGua() enlarge the window
+  " ToggleWin() adapt the window size
   " hotkey binding is at 'Keymaps' region
-  function KaiGua(plus_lines, plus_columns)
+  function ToggleWin(plus_lines, plus_columns)
     if &lines == g:lines_const && &columns == g:columns_const
       let &lines = a:plus_lines
       let &columns = a:plus_columns
@@ -133,9 +133,8 @@ if has("clipboard")
   cmap <C-V>		<C-R>+
 endif
 
-" KaiGua()
 if has('gui_running')
-  nnoremap <silent> <F3>  :call KaiGua(g:lines_const + 10, 2 * g:columns_const)<CR>
+  nnoremap <silent> <F3>  :call ToggleWin(g:lines_const + 10, 2 * g:columns_const)<CR>
 endif
 
 " quickfix
