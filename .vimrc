@@ -1,4 +1,6 @@
-""""""""""CUSTOMIZATION""""""""""
+" Please report any issues to https://github.com/rustyhu/vimrc, thanks a lot!
+
+"""""""""""CUSTOMIZATION""""""""""
 set nocompatible
 
 """"" Load plugin manager
