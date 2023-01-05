@@ -12,7 +12,7 @@ endif
 """"" End Load plugin manager
 
 """"" Basics
-"" As rm command is dangerous in Unix-like systems, keeping a backup for files is important.
+"" As rm command is dangerous in Unix-like systems (rmed files can not recover usually), keeping backups may be useful. But now it's off as too annoying.
 set nobackup
 set ruler
 set number
