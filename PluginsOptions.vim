@@ -26,7 +26,7 @@ let g:ycm_global_ycm_extra_conf = '~/vimrc/.ycm_extra_conf.py'
 let g:ycm_use_clangd = 0
 
 """ ultisnips
-let g:UltiSnipsExpandTrigger = "<c-enter>"
+let g:UltiSnipsExpandTrigger = "<enter>"
 
 """ vim-go
 "let g:go_autodetect_gopath = 1
