@@ -22,8 +22,8 @@ let g:cpp_member_variable_highlight = 1
 " Indicate a global ycm conf for c/c++ programming analysis.
 " Define a overlap one if another position is used.
 let g:ycm_global_ycm_extra_conf = '~/vimrc/.ycm_extra_conf.py'
-" close YCM clangd now
-let g:ycm_use_clangd = 0
+" close YCM clangd (deprecated)
+"let g:ycm_use_clangd = 0
 
 """ ultisnips
 let g:UltiSnipsExpandTrigger = "<enter>"
@@ -37,6 +37,6 @@ let g:go_gopls_enabled = 0
 """"" PLUGINS KEYMAPS 
 nnoremap <F2>  :NERDTreeToggle<CR>
 nnoremap <F4>  :TagbarToggle<CR>
-" Jump
-nnoremap <leader>e  :YcmCompleter GoTo<CR>
+" Jump to definition
+nnoremap <leader>d  :YcmCompleter GoTo<CR>
 
