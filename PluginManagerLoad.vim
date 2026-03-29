@@ -13,7 +13,7 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   " As a submodule of parent repo, Vundle do not manage itself any more.
   "Plugin 'VundleVim/Vundle.vim'
   " Basics
-  Plugin 'majutsushi/tagbar'
+  "Plugin 'majutsushi/tagbar'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'vim-airline/vim-airline'
@@ -24,8 +24,7 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   " Programming support
   Plugin 'SirVer/ultisnips'
   Plugin 'honza/vim-snippets'
-  Plugin 'ycm-core/YouCompleteMe'
-  " Enhancements of cpp, rust(go use gopls, with YCM instead of vim-go)
+  " Enhancements of C++, Go, Rust
   Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'fatih/vim-go'
   Plugin 'rust-lang/rust.vim'
