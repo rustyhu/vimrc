@@ -10,10 +10,8 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   " alternatively, pass a path where Vundle should install plugins
   "call vundle#begin('~/some/path/here')
 
-  " As a submodule of parent repo, Vundle do not manage itself any more.
-  "Plugin 'VundleVim/Vundle.vim'
+  Plugin 'VundleVim/Vundle.vim'
   " Basics
-  "Plugin 'majutsushi/tagbar'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'vim-airline/vim-airline'
@@ -21,10 +19,7 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   Plugin 'jiangmiao/auto-pairs'
   " Git wrapper
   Plugin 'tpope/vim-fugitive'
-  " Programming support
-  Plugin 'SirVer/ultisnips'
-  Plugin 'honza/vim-snippets'
-  " Enhancements of C++, Go, Rust
+  " Programming support of C++, Go, Rust
   Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'fatih/vim-go'
   Plugin 'rust-lang/rust.vim'
