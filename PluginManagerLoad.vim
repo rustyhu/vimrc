@@ -1,7 +1,6 @@
 """"" PluginManager
 
 if glob('~/vimrc/bundle/Vundle.vim') != ""
-  """"" Vundle config
   filetype off                  " required
 
   " set the runtime path to include Vundle and initialize
@@ -25,15 +24,6 @@ if glob('~/vimrc/bundle/Vundle.vim') != ""
   Plugin 'rust-lang/rust.vim'
 
   call vundle#end()            " required
-  " To ignore plugin indent changes, instead use:
-  "filetype plugin on
-  """"" End Vundle config
-
-elseif glob('~/.vim/bundle/vim-pathogen') != ""
-  """"" Pathogen config
-  runtime bundle/vim-pathogen/autoload/pathogen.vim
-  execute pathogen#infect()
-  """"" End Pathogen config
 endif
 
 filetype plugin indent on    " required

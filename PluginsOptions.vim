@@ -15,11 +15,6 @@ let g:airline#extensions#whitespace#checks=['indent', 'mixed-indent-file']
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 
-""" vim-go
-"let g:go_autodetect_gopath = 1
-" turn off vim-go's gopls
-let g:go_gopls_enabled = 0
-
 
 """"" PLUGINS KEYMAPS
 nnoremap <F2>  :NERDTreeToggle<CR>
